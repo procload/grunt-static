@@ -1,0 +1,207 @@
+/*@import "compass";*/
+/*@import "bourbon";*/
+.main-content {
+  max-width: 99.875em;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(102, 102, 255, 0.25)), color-stop(66.66667%, rgba(179, 179, 255, 0.25)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.66667%, transparent 66.66667%), -webkit-linear-gradient(top, black 5%, transparent 5%);
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.66667%, transparent 66.66667%), linear-gradient(to bottom, black 5%, transparent 5%);
+  -webkit-background-size: 6.38298%, 100% 24px;
+  background-size: 6.38298%, 100% 24px;
+  -webkit-background-origin: content-box, border-box;
+  background-origin: content-box, border-box;
+  -webkit-background-clip: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top; }
+  .main-content::after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/*
+  @include scopedmediaquery(
+    '(min-width : 30em)', '.content',
+    '(min-width : 90em)', 'aside'
+  ) {
+*/
+/* 
+  .schedule-component {
+      float: left;
+      width: 100%;
+      position:relative;
+  }
+  .schedule-component ul,
+  .schedule-component li {
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+}
+*/
+/*
+@include keyframes(move) {
+  0%   { left: 0; }
+  100% { left: 100px; }
+}
+
+.box {
+  @include animation(move 0.5s ease infinite alternate);
+}
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+body {
+  background: white;
+  color: #090a0e;
+  line-height: 24px;
+  font-size: 100%;
+  font-family: "Helvetica"; }
+
+img {
+  max-width: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.25;
+  font-size: 32px;
+  font-family: "Georgia"; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.3em; }
+
+h4 {
+  font-size: 1em;
+  text-transform: uppercase; }
+
+h5 {
+  font-size: 1em;
+  margin-bottom: .25em; }
+
+h6 {
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: .25em; }
+
+h1 + h1,
+h2 + h2,
+h3 + h3,
+h4 + h4,
+h5 + h5,
+h6 + h6 {
+  margin-top: 1em; }
+
+p {
+  margin: 0 0 1em 0; }
+  p:last-child {
+    margin-bottom: 0; }
+  p.disclaimer {
+    font-size: 0.8125em; }
+
+dt {
+  margin-bottom: 0.5em; }
+
+dd {
+  margin-bottom: 1.5em; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
+
+a:link {
+  color: #477dca;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
+
+a:visited {
+  color: #477dca; }
+
+a:hover {
+  color: #3264ac;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
+
+a:active {
+  color: #3264ac;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
+
+input[type="text"] {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: #cccccc; }
+  input[type="text"]:focus, input[type="text"]:active {
+    background: white; }
+
+label,
+label.control-label {
+  font-size: 0.8125em; }
+
+legend {
+  font-size: 0.875em;
+  margin: 0 0 0.5em 0; }
+
+.example {
+  border: 1px solid #999999;
+  background: #cccccc; }
+
+.main-content {
+  /*@include susy-grid-background; */ }
+  head {
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+    color: #333;
+    background: rgba(255, 255, 255, 0.25); }
+  head::before {
+    content: "|||";
+    display: block;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold; }
+  head:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: red; }
+  head:hover ~ .main-content, head:hover ~ body .main-content {
+    position: relative; }
+    head:hover ~ .main-content::before, head:hover ~ body .main-content::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: " ";
+      z-index: 998;
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(102, 102, 255, 0.25)), color-stop(66.66667%, rgba(179, 179, 255, 0.25)), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+      background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.66667%, transparent 66.66667%), -webkit-linear-gradient(top, black 5%, transparent 5%);
+      background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.66667%, transparent 66.66667%), linear-gradient(to bottom, black 5%, transparent 5%);
+      -webkit-background-size: 6.38298%, 100% 24px;
+      background-size: 6.38298%, 100% 24px;
+      -webkit-background-origin: content-box, border-box;
+      background-origin: content-box, border-box;
+      -webkit-background-clip: content-box, border-box;
+      background-clip: content-box, border-box;
+      background-position: left top; }
